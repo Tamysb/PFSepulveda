@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* font-family: 'Onest', sans-serif;
+font-family: 'Rubik', sans-serif; */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+// paleta de colores
+$color1: #000000;
+$color2: #ffffff;
+$color3: #808080;
+$color4: #6d1d69;
+// Fuentes
+$font1: 'Onest', sans-serif;
+$font2: 'Rubik', sans-serif;
+$font3: small-caps;
+// Mixin listas y enlaces paginas
+$li: (
+    list-style: none,
+    display: inline-block,
+    padding: 10px
+);
+
+@mixin li-estilos($list-style, $display, $padding){
+    list-style: $list-style;
+    display: $display;
+    padding: $padding;
+}
+$a: (
+    text-decoration: none,
+    color: $color2
+);
+@mixin enlaces-paginas($text-decoration, $color){
+    text-decoration: $text-decoration;
+    color: $color;
+}
+/* Header */
+header{
+    background-color:$color1;
+    color: $color2;
+    font-family: $font1;
+    font-variant: $font3;
+    text-align: center; 
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    nav{
+        ul{
+            li{
+                @include li-estilos($li...);
+                a{
+                    @include enlaces-paginas($a...);
+                }
+            }
+        }
+    }
+}
+h1{ 
+    font-size: 30px;
+    font-weight: bold;
+}
+nav a:hover{
+    color: $color2;
+}
+nav a:active{
+    color: $color4;
+}
+/* Fin Header */
+/* Main */
+.slide-main{
+    background-image: url(img/girlsleep.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: $color1;
+    position: relative;
+    background-size: cover;
+    height: 400px;
+    animation-name: efecto;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+
+    @keyframes efecto {
+        0%{
+            height: 800px;
+
+        }
+        100%{
+            height: 300px;
+        }
+        
+    }
+}
+/* Fin Main */
+/*Breadcrumb*/
+.breadcrumb{
+    background-color: $color1;
+    margin-bottom: 0;
+    li{
+        @include li-estilos($li...);
+        font-variant: $font3;
+
+
+        a{
+            @include enlaces-paginas($a...);
+        }
+    }
+}
+/*Fin Breadcrumb*/
+/* Home Carrusel*/
+.row{
+    background-color: $color1;
+}
+.container-fluid{
+    h3{
+        color: $color4;
+        font-family: $font1;
+        text-align: center;
+        font-variant: small-caps;
+    }
+}
+.imagen-producto{
+    height: 600px;
+    width: 400px;
+    background-image: url(img/womendress.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.container-fluid p{
+    color: $color3;
+    font-family: $font1;
+    text-align: center;
+}
+/*Fin Home*/
+// Breakpoints
+/* Desktop estilos */
+@media only screen and (min-width:1300px) and (max-width:2560px) {
+    .slide-main{
+        height: 400px;
+    }
+    .row{
+        padding-right: 40px;
+    }
+
+    .col-xl-7{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .col-xl-5{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .imagen-producto{
+        height: 900px;
+        width: 600px;
+        background-image: url(img/woman-1547507_1280.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+
+    
+}
+@media only screen and (min-width: 992px)and (max-width:1200px){
+    /*main*/
+    .slide-main{
+        height: 400px;
+    }
+    /*fin main*/
+    /*home*/
+    .row{
+        padding-right: 40px;
+    }
+    .col-lg-7{
+        padding-top: 20px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .col-lg-5{
+        padding-top: 20px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    /*fin home*/
+}
+
+/* Tablet estilos  */
+@media (max-width:768px){
+    /*manin*/
+    .slide-main{
+        height: 350px;
+    }
+    /*fin main*/
+    /*home*/
+    .col-md-7{
+        background-color: $color1;
+        padding: 20px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .col-md-5{
+        @extend .col-md-7;
+    }
+    /*fin home*/
+
+}
+
+
+/* Mobile estilos */
+@media only screen and (min-width:400px) and (max-width:576px){
+    /*main*/
+    .slide-main{
+        height: 300px;
+    }
+    /*main*/
+    /*home*/
+    .col-sm-12{
+        padding: 10px;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: $color1;
+    
+    }
+    .imagen-producto{
+        min-height: 40em;
+        min-width: 20em;
+        max-height: 55em;
+        max-width: 35em;
+    }
+    /*fin home*/
+}
+
+@media only screen and (max-width: 320px){
+    body{
+        max-width: 320px;
+    }
+    /*header*/
+    header{
+        nav{
+            ul{
+                li{
+                    padding: 5px;
+                }
+            }
+        }
+    }
+    /*fin header*/
+    /*main*/
+    .slide-main{
+        height: 200px;
+    }
+    /*fin main*/
+    /*home*/
+    .container-fluid{
+        max-width: 320px;
+        background-color: $color1;    
+    } 
+    .container-fluid .col{
+        max-width: 320px;
+        max-height: 550px;
+        justify-content: flex-start;
+        margin: 0;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+    .imagen-producto{
+        height: 600px;
+        width: 280px;
+    }
+    /*fin home*/
+}  
+/* Tienda */
+.tienda{
+    background-color: $color1;
+    display: flex;
+    padding: 40px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.producto{
+    height: 350px;
+    background-color: $color1;
+    
+}
+.producto:hover{
+    transform: scale(1.1);
+}
+
+.producto-img{
+    height: 300px;
+    width: 200px; 
+    background-image: url(img/womendress.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.producto-title{
+    color: $color4;
+    font-size: 20px;
+    font-family: $font1;
+    font-weight: bold;
+    text-align: center;
+    font-variant: $font3;
+    margin-bottom: 2px;
+}
+
+.producto-precio{
+    color: $color2;
+    font-size: 15px;
+    font-family: $font2;
+    font-weight: lighter;
+    text-align: center;
+}
+/* Fin Tienda */
+/* Contacto */
+$height: 50px;
+$widht: 240px;
+.contacto{
+    background-color: $color1;
+    font-family: $font2;
+    font-size: 20px;
+    color: $color2;
+    text-transform: uppercase;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    .contacto-form{
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        input[type="text"]{
+            border: none;
+            height: $height;
+            width: $widht;
+            margin-bottom: 10px;
+        }
+        #comentario{
+            border: none;
+            height: $height;
+            width: $widht;
+            margin-bottom: 10px;
+        }
+        input[type="email"]{
+            border: none;
+            height: $height;
+            width: $widht;
+            margin-bottom: 10px;
+        }
+        input[type="submit"]{
+            background-color: $color3;
+            width: $widht;
+        }
+        a{
+            color: $color3;
+            font-size: 15px;
+        }
+    }
+    .contacto-info{
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        width:370px;
+        p{
+            font-size: 17px;
+        }
+
+    }
+}
+/* Fin Contacto */
+/* Carro */
+.table-responsive{
+    background-color: $color1;
+    padding: 20px;
+}
+
+.table{
+    background-color: $color2;
+    border: 2px solid $color1;
+    margin: 0 auto;
+    font-family: $font2;
+    color: $color1;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+/* Fin Carro */
+/* Acceso */
+$height: 50px;
+$widht: 240px;
+.acceso-sesion{
+    background-color: $color1;
+    padding: 20px;
+    font-family: $font2;
+    font-size: 20px;
+    color: $color2;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 50px;
+    form{
+        input[type="email"]{
+            border: none;
+            height: $height;
+            width: $widht;
+            margin-bottom: 10px;
+        }
+        input[type="password"]{
+            height: $height;
+            width: $widht;
+        }
+        input[type="submit"]{
+            background-color: $color3;
+            width: $widht;
+        }
+        a{
+            color: $color3;
+            font-size: 15px;
+        }
+
+    }
+
+}
+/* Fin Acceso */
+/* Footer */
+footer{
+    background-color: $color3;
+    color: $color1;
+    font-size: 20px;
+    font-family: $font1;
+    font-variant: $font3;
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 5px;
+}
+.footer{
+    width: 320px;
+    ul{
+        padding-left: 0px;
+        li{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            text-align: right; 
+            a{
+                @include enlaces-paginas($a...);
+            } 
+        }
+    }
+    
+    
+
+}
+.form-footer{
+    width: 320px;
+    h2{
+        text-align: center;
+        font-weight: bold;
+    }
+    input[type="email"]{
+        border: none;
+        
+    }
+    input[type="submit"]{
+        background-color: $color1;
+        color: $color2;
+        border: none;
+    }
+    }
+#redes{
+         a{
+            width: 53px;
+            color: $color1;
+            align-items: center;
+            font-size: 25px;
+        }
+    }
+
+/* Fin Footer */
