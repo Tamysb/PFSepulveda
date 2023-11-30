@@ -113,7 +113,7 @@ nav a:active{
     height: 400px;
     animation-name: efecto;
     animation-iteration-count: 1;
-    animation-duration: 2s;
+    animation-duration: 1s;
 
     @keyframes efecto {
         0%{
@@ -153,18 +153,31 @@ nav a:active{
         text-align: center;
         font-variant: small-caps;
     }
+    p{
+        color: #ffffff;
+    }
+    a{
+        text-decoration: none;
+    }
 }
-.imagen-producto{
+.carousel-caption{
+    position: unset;
+}
+.imagen{
     height: 600px;
     width: 400px;
     background-image: url(img/womendress.jpg);
     background-position: center;
     background-size: cover;
 }
-.container-fluid p{
-    color: $color3;
-    font-family: $font1;
-    text-align: center;
+.about{
+    background-color: #000000;
+    padding: 30px;
+    p{
+        color: $color3;
+        font-family: $font1;
+        text-align: center;
+    }
 }
 /*Fin Home*/
 // Breakpoints
@@ -193,9 +206,9 @@ nav a:active{
         justify-content: flex-start;
         align-items: flex-start;
     }
-    .imagen-producto{
-        height: 900px;
-        width: 600px;
+    .imagen{
+        height: 800px;
+        width: 500px;
         background-image: url(img/woman-1547507_1280.jpg);
         background-position: center;
         background-size: cover;
@@ -226,6 +239,13 @@ nav a:active{
         flex-flow: row wrap;
         justify-content: flex-start;
         align-items: center;
+    }
+    .imagen{
+        height: 750px;
+        width: 450px;
+        background-image: url(img/woman-1547507_1280.jpg);
+        background-position: center;
+        background-size: cover;
     }
     /*fin home*/
 }
@@ -273,7 +293,7 @@ nav a:active{
         background-color: $color1;
     
     }
-    .imagen-producto{
+    .imagen{
         min-height: 40em;
         min-width: 20em;
         max-height: 55em;
@@ -309,18 +329,30 @@ nav a:active{
     } 
     .container-fluid .col{
         max-width: 320px;
-        max-height: 550px;
         justify-content: flex-start;
         margin: 0;
         display: flex;
         flex-wrap: nowrap;
         flex-direction: column;
     }
-    .imagen-producto{
+    .imagen{
         height: 600px;
         width: 280px;
     }
     /*fin home*/
+    footer{
+        .footer{
+            width: 220px;
+        }
+        .form-footer{
+            
+            input[type="email"]{
+                width: 245px;
+                
+            }
+        }
+    }
+    
 }  
 /* Tienda */
 .tienda{
@@ -416,6 +448,7 @@ $widht: 300px;
         input[type="submit"]{
             background-color: $color3;
             width: $widht;
+            border: none;
         }
         a{
             color: $color3;

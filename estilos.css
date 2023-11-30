@@ -93,7 +93,7 @@ nav a:active {
   height: 400px;
   animation-name: efecto;
   animation-iteration-count: 1;
-  animation-duration: 2s;
+  animation-duration: 1s;
 }
 @keyframes efecto {
   0% {
@@ -133,8 +133,18 @@ nav a:active {
   text-align: center;
   font-variant: small-caps;
 }
+.container-fluid p {
+  color: #ffffff;
+}
+.container-fluid a {
+  text-decoration: none;
+}
 
-.imagen-producto {
+.carousel-caption {
+  position: unset;
+}
+
+.imagen {
   height: 600px;
   width: 400px;
   background-image: url(img/womendress.jpg);
@@ -142,7 +152,11 @@ nav a:active {
   background-size: cover;
 }
 
-.container-fluid p {
+.about {
+  background-color: #000000;
+  padding: 30px;
+}
+.about p {
   color: #808080;
   font-family: "Onest", sans-serif;
   text-align: center;
@@ -173,9 +187,9 @@ nav a:active {
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .imagen-producto {
-    height: 900px;
-    width: 600px;
+  .imagen {
+    height: 800px;
+    width: 500px;
     background-image: url(img/woman-1547507_1280.jpg);
     background-position: center;
     background-size: cover;
@@ -204,6 +218,13 @@ nav a:active {
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: center;
+  }
+  .imagen {
+    height: 750px;
+    width: 450px;
+    background-image: url(img/woman-1547507_1280.jpg);
+    background-position: center;
+    background-size: cover;
   }
   /*fin home*/
 }
@@ -243,7 +264,7 @@ nav a:active {
     align-items: center;
     background-color: #000000;
   }
-  .imagen-producto {
+  .imagen {
     min-height: 40em;
     min-width: 20em;
     max-height: 55em;
@@ -272,18 +293,23 @@ nav a:active {
   }
   .container-fluid .col {
     max-width: 320px;
-    max-height: 550px;
     justify-content: flex-start;
     margin: 0;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
   }
-  .imagen-producto {
+  .imagen {
     height: 600px;
     width: 280px;
   }
   /*fin home*/
+  footer .footer {
+    width: 220px;
+  }
+  footer .form-footer input[type=email] {
+    width: 245px;
+  }
 }
 /* Tienda */
 .tienda {
@@ -408,6 +434,7 @@ nav a:active {
 .contacto .contacto-form input[type=submit] {
   background-color: #808080;
   width: 300px;
+  border: none;
 }
 .contacto .contacto-form a {
   color: #808080;
