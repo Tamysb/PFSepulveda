@@ -7,6 +7,48 @@ font-family: 'Rubik', sans-serif; */
   box-sizing: border-box;
 }
 
+.womendress-icon {
+  background-image: url("img/womendress.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.dress1-icon {
+  background-image: url("img/dress1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.dress2-icon {
+  background-image: url("img/dress2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.dress3-icon {
+  background-image: url("img/dress3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.dress4-icon {
+  background-image: url("img/dress4.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.dress5-icon {
+  background-image: url("img/dress5.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.dress6-icon {
+  background-image: url("img/dress6.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
 /* Header */
 header {
   font-family: "Onest", sans-serif;
@@ -53,22 +95,7 @@ header {
   color: #ffffff;
 }
 
-.nav-link {
-  color: #ffffff;
-}
-.nav-link a:active {
-  color: #6d1d69;
-}
-
 .navbar a:active {
-  color: #6d1d69;
-}
-
-nav a:hover {
-  color: #ffffff;
-}
-
-nav a:active {
   color: #6d1d69;
 }
 
@@ -121,6 +148,10 @@ nav a:active {
   color: #ffffff;
 }
 
+nav a:active {
+  color: #6d1d69;
+}
+
 /*Fin Breadcrumb*/
 /* Home Carrusel*/
 .row {
@@ -171,20 +202,12 @@ nav a:active {
   .row {
     padding-right: 40px;
   }
-  .col-xl-7 {
+  .col-xl-7, .col-xl-5 {
     padding-top: 20px;
     padding-bottom: 20px;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    align-items: flex-start;
-  }
-  .col-xl-5 {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
     align-items: flex-start;
   }
   .imagen {
@@ -276,11 +299,6 @@ nav a:active {
   body {
     max-width: 320px;
   }
-  /*header*/
-  header nav ul li {
-    padding: 5px;
-  }
-  /*fin header*/
   /*main*/
   .slide-main {
     height: 200px;
@@ -334,48 +352,6 @@ nav a:active {
 .producto-img {
   height: 500px;
   width: 300px;
-}
-
-.womendress-icon {
-  background-image: url("img/womendress.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-.dress1-icon {
-  background-image: url("img/dress1.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-.dress2-icon {
-  background-image: url("img/dress2.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-.dress3-icon {
-  background-image: url("img/dress3.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-.dress4-icon {
-  background-image: url("img/dress4.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-.dress5-icon {
-  background-image: url("img/dress5.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-.dress6-icon {
-  background-image: url("img/dress6.jpg");
-  background-size: cover;
-  background-position: center;
 }
 
 .producto-title {
@@ -555,6 +531,10 @@ footer {
 .footer ul li a {
   text-decoration: none;
   color: #ffffff;
+}
+
+.footer a:hover {
+  color: #6d1d69;
 }
 
 .form-footer {
